@@ -84,7 +84,6 @@ function finalTally(){
     lbtn.style.cssFloat = 'right';
     lbtn.addEventListener('click', chngO);
 
-    //New button added here for accepting order//
     let rbtn = document.createElement('button');
     rbtn.textContent = 'Submit order';
     rbtn.style.fontSize = '1rem';
@@ -134,7 +133,7 @@ function check(){
 function nextS() {
         for (let i = 0; i < sections.length - 1; i++) {
         
-          //replace the display property with display:none and make the new section appear.
+
         if (sections[i].classList.contains('visible')){  
           sections[i].classList.remove('visible');
           sections[i+1].classList.add('visible');
@@ -206,7 +205,6 @@ let topay = inputs[c].getAttribute('data-price');
               createPara('data-name', inputs[c].getAttribute('id'));
                 paras[paras.length - 1].innerHTML = ingredients+' <span>$'+topay+'</span>';
                    }
-                //otherwise if it is checked just get the text and output it into the receipt. 
             else if (inputs[c].checked && inputs[c].hasAttribute('data-price')===false){ 
                 inputs = visible.getElementsByTagName('input');
                  ingredients =+ secParas[c].innerText || secParas[c].textContent;
